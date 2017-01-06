@@ -3,7 +3,6 @@
 CSS Reset
 =========
 */
-
 	*,
 	*::before,
 	*::after{
@@ -85,16 +84,294 @@ Style
 */
 	body{
 		padding: 5em 2em;
-		text-align: center;
-		font-family: Helvetica, Arial, sans-serif;
+		font-family: 'Biryani', Helvetica, Arial, sans-serif;
+		margin: 0 auto;
+		font-size: 1em;
+		line-height: 1.5em;
+		color: #777;
+		max-width: 99em;
+	}
+	
+	strong{
+		color:#555;
 	}
 	
 	h1{
 		line-height: 3em;
+		font-size: 2em;
+	}
+	
+	h2{
+		font-size: 1.5em;
+		line-height: 2em;
+		margin: 7rem auto 0rem;
+	}
+	
+	h1,h2,h3{
+		color: #333;
 	}
 	
 	p{
-		max-width: 30em;
-		margin: 0 auto;
-		line-height: 1.5em;
+		margin: 1.5em auto 0;
+		line-height: 1.75em;
 	}
+	
+	a{
+		color: #3B519B;
+	}
+
+	/*
+	Various
+	-------
+	*/	
+		.disclamer{
+			font-size: 0.75rem;
+		}
+	
+	/*
+	Grid
+	----
+	*/
+		.half{
+			display: inline-block;
+			vertical-align: top;
+			padding: 0 2rem;
+			width: 50%;
+		}
+		
+		.block{
+			display: block;
+			margin: 0 auto;
+		}
+		
+		.txt{
+			max-width: 34em;
+		}
+	
+	/*
+	Header
+	======
+	*/
+		/*
+		Logo
+		----
+		*/
+		.logo{
+			text-align: center;
+		}
+		
+		.logo h1{
+			font-size: 0.75em;
+			text-transform: uppercase;
+			color: #3B519B;
+		}
+		
+		.logo img{
+			width: 2rem;
+			height: auto;
+		}
+		
+		.nav{
+			text-transform: uppercase;
+			font-size: 0.75rem;
+			position: fixed;
+			top: 0;
+			left: 0;
+			line-height: 5rem;
+			font-weight: bold;
+			background: #fff;
+			background-color: hsla(0, 0%, 100%, 0.7);
+		}
+		
+		.nav a{
+			color: #555;
+		}
+		
+		.currentPage::after{
+			content: "";
+			display: block;
+			height: 0.25em;
+			width: 100%;
+			background: #3B519B;
+			margin-top: -0.5em;
+		}
+	
+		.proposition h2{
+			text-align: center;
+			font-size: 3.5rem;
+			margin: 1em 0;
+			line-height: 2.5em;
+		}
+		
+		.proposition h2::after{
+			content: "";
+			display: block;
+			margin: 1rem auto 6rem;
+			width: 8rem;
+			height: 0.5rem;
+			background: #3B519B;
+		}
+		
+		.workflow{
+			text-align: center;
+		}
+		
+		.workflow h2::after{
+			content: "";
+			display: block;
+			height: 0.25em;
+			background: #3B519B;
+			width: 8rem;
+			margin: 0 auto;
+		}
+		.workflow{
+			text-align: center;
+		}
+		
+		.workflow ol{
+			padding: 0 3rem;
+			text-align: left;
+			display: inline-block;
+			max-width: 50em;
+			margin: 3rem auto 0;
+			line-height: 1.75em;
+		}
+		
+	/*
+	Contact form
+	============
+	*/	
+		.contactForm{
+			margin: 0 auto;
+			max-width: 32em;
+		}
+		
+		label{
+			display: block;
+			margin: 1.5em 0 0;
+		}
+		
+		input{
+			font-size: 2em;
+			width: 100%;
+			line-height: 3em;
+			padding: 0 0.5em;
+			display: block;
+		}
+		
+		input, 
+		textarea{
+			border: 3px solid #ccc;
+			box-shadow: none;
+		}
+		
+		input:focus,
+		textarea:focus{
+			outline: none;
+			border-color: #3B519B;
+		}
+		
+		textarea{
+			padding: 0.5em;
+			display: block;
+			width: 100%;
+			font-size: 1em;
+			line-height: 1.5em;
+			min-height: 9em;
+		}
+		
+		button{
+			color: #333;
+			border: 3px solid;
+			background: none;
+			box-shadow: none;
+			font-size: 1em;
+			display: block;
+			width: 50%;
+			display: block;
+			line-height: 3em;
+			margin: 1.5em auto 0;
+		}
+		
+		button:hover, 
+		button:active{
+			border-color: #3B519B;
+			color: #fff;
+			background: #3B519B;
+		}
+	/*
+	Footer
+	======
+	*/
+	.footer{
+		height: 6rem;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		font-size: 0.75em;
+		text-align: center;
+	}	
+	
+	body{
+		position: relative;
+		padding-bottom: 16rem;
+	}
+
+	/*
+	Responsive
+	==========
+	*/
+		@media only screen and (max-width: 72em) {
+			.proposition h2{
+				font-size: 2rem;
+			}
+			.proposition h2::after{
+				margin: 0 auto 3rem;
+			}
+			.proposition p{
+				padding: 0 7rem
+			}
+		}
+		
+		
+		@media only screen and (max-width: 72em) {
+			.half{
+				width: 100%;
+			}
+		}	
+		@media only screen and (max-width: 50em) {
+			.proposition p{
+				padding: 0 3rem;
+				text-align: justify;
+			}
+			
+			.txt{
+				padding: 0;
+			}
+		}
+		
+		@media only screen and (max-width: 36em) {
+			body{
+				font-size: 0.875em;
+				padding-left: 3em;
+				padding-right: 3em;
+				padding-top: 3em;
+			}
+			.proposition h2{
+				font-size: 1.25em;
+			}
+			.proposition p,
+			.workflow ol{
+				padding: 0;
+			}
+			
+			
+			
+			h2{
+				margin-top: 3em;
+				margin-bottom: -0.75em;
+			}
+			
+		}
+		
