@@ -317,7 +317,15 @@ Style
 		position: relative;
 		padding-bottom: 16rem;
 	}
-
+	
+	/*
+	Thanks
+	======
+	*/
+	.thanks{
+		text-align: center;
+	}
+	
 	/*
 	Responsive
 	==========
